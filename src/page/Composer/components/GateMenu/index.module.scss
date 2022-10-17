@@ -1,0 +1,17 @@
+:root {
+  height: 100%;
+  :global {
+    .drag {
+      margin-top: 20px;
+      height: 100%;
+      width: 100%;
+      .draggable {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  }
+}

@@ -91,7 +91,6 @@ export default function Four() {
   const [circuit, setCircuit] = useState(defaultCircuit)
   const [geteType, setGeteType] = useState('')
   const [coordinate, setcoordinate] = useState(null)
-  
 
   // 获取拖拽元素的类型
   const setGatesType = (type) => {
@@ -113,7 +112,6 @@ export default function Four() {
         tmpCircuit[0].splice(aaa, 1, geteType)
         aaa = null
       } else if (coordinate > 42 && coordinate <= 82) {
-        console.log(1)
         let aaa = null
         tmpCircuit[1].some((gate, index) => {
           aaa = index

@@ -4,10 +4,9 @@ import Topological from './components/Topological'
 import styles from './index.module.scss'
 export default function Evolution() {
   // const [topologicalData, setTopologicalData] = useState([])
-  let topologicalData = [0]
+  let topologicalData = []
   const { qc } = useContext(qcContext)
   if (qc.circuit) {
-    console.log(qc)
     const { labels } = qc
     topologicalData = []
     labels.forEach((item) => {
@@ -21,12 +20,13 @@ export default function Evolution() {
   }
   return (
     <div
+      className="toplogicalFather"
       style={{
         overflow: 'hidden',
         overflowY: 'scroll',
         overflowX: 'scroll',
-        height:'100%',
-        width:'100%'
+        height: '100%',
+        width: '100%',
       }}
     >
       {topologicalData.map((topoData, index) => (

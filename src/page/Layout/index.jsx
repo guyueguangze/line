@@ -6,6 +6,7 @@ import styles from './index.module.scss'
 const { Header, Content, Sider } = Layout
 const Quantum = lazy(() => import('../quantum'))
 const Qcode = lazy(() => import('../Qcode'))
+const Qcomposer = lazy(() => import('../Composer'))
 export default function MyLayout() {
   const history = useHistory()
   const slideBarMenu = side.map((item) => ({
@@ -34,9 +35,10 @@ export default function MyLayout() {
                 <Switch>
                   <Route path="/quantum" component={Quantum}></Route>
                   <Route path="/qcode" component={Qcode}></Route>
+                  <Route path="/composer" component={Qcomposer}></Route>
                   <Route
                     path="/"
-                    render={() => <Redirect to="/quantum" />}
+                    render={() => <Redirect to="/qcode" />}
                     exact
                   />
                 </Switch>

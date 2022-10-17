@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,10 +12,12 @@
     "axios": "^0.27.2",
     "d3": "^7.6.1",
     "deepcopy": "^2.1.0",
+    "gh-pages": "^4.0.0",
     "lodash": "4.17.21",
     "mathjax": "^3.2.2",
     "mathjs": "^11.2.1",
     "ml-matrix": "6.8.2",
+    "nanoid": "^4.0.0",
     "quantum-circuit": "0.9.188",
     "react": "^18.2.0",
     "react-ace": "^10.1.0",
@@ -24,11 +27,14 @@
     "sass": "^1.54.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://guyueguangze.github.io/line",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -21,7 +21,7 @@ export default function Editor() {
       setCode('//please')
     } else {
       axios
-        .get('/js/' + value + '.js')
+        .get('/line/js/' + value + '.js')
         .then((res) => {
           setCode(res.data)
         })
@@ -65,14 +65,13 @@ export default function Editor() {
     {
       value: 'Deutsch-Jozsa Algorithm',
     },
-    {
-      value: 'Markov Process',
-    },
   ]
   // /*'user_study', 'into_evolution','case 1', 'bell_state', 'all gates', 'ex7-7', 'ex7-1', 'Markov Process',*/ 'about:blank',
 
   // case的列表，public\js中需要存对应的文件
-
+  useEffect(() => {
+    selectOnChange(optionList[0].value)
+  }, [])
   // 运行
   const runProgram = (sample) => {
     let noBug = false
